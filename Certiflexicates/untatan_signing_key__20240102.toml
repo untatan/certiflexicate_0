@@ -1,0 +1,28 @@
+certiflexicate = "certiflexicate"
+version = 1
+
+[public_signing_key]
+version = 1
+of_type = "ed25519_1"
+base64 = "1f4MoP1Znz5FLB-7My16wKj329W26jaPCXhGjzcroMs="
+identifier = "untatan signing key 20240102"
+
+[signatures.sqvv3yaQ_JzBTHKebmFnB0iXmOqzRVhhS_QCPCzCQXHgbwlt]
+version = 1
+base64 = "GSpFq90w5KdxGBpMwnkCXrblNF9JkAIjfLcynlG4m1vDBNQUimhMaUE9RRFAhAQZ8j126ZjF-rsoX5hTSiSUAQ=="
+nonce = "sqvv3yaQ_JzBTHKebmFnB0iXmOqzRVhhS_QCPCzCQXHgbwlt"
+signed_fields = ["flexicate", "public_signing_key", "signature_data"]
+accepted_base64 = "zAkaBTL-j5XJJEvDHOElYZHqs90RWotuN2SepIqcmwe4QWE6q6_x740pygfUljDaEVEV6wM37NaBRLsb2tJ3Bw=="
+
+[signatures.sqvv3yaQ_JzBTHKebmFnB0iXmOqzRVhhS_QCPCzCQXHgbwlt.public_signing_key]
+version = 1
+of_type = "ed25519_1"
+base64 = "oqVE6Pi6M1upWbckmW1lQ-MvzFS7cRVDI_yKhU6449I="
+identifier = "untatan key 20240101"
+
+[signatures._OE3NtHJvhNS9dfU9YQpUunDfvvcl-ak9S1Kvh6B9V-Ezo4z]
+version = 1
+base64 = "3_7q_gKvV3VpTpEXPVs6lKWcnOCPCkVUMsEXkTaUOqWgdT0c5nwPa4rDrsGh7GfSnLMzN2Jg9gItbQckvKCACA=="
+nonce = "_OE3NtHJvhNS9dfU9YQpUunDfvvcl-ak9S1Kvh6B9V-Ezo4z"
+signed_fields = ["flexicate", "public_signing_key", "signature_data"]
+accepted_base64 = "rE_hY_7skQywa5w4iSIi50ijbpjTpH26h9sTk6ZkMcYWaD43SUgR_oxntPh9FTl-g4AL9P84GHu0iBIHRBlKBg=="

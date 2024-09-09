@@ -1,0 +1,23 @@
+certiflexicate = "certiflexicate"
+version = 1
+byte_content = [99, 111, 109, 109, 105, 116, 32, 57, 98, 55, 56, 101, 101, 57, 56, 53, 97, 97, 54, 100, 56, 98, 99, 102, 57, 54, 52, 52, 99, 100, 53, 99, 52, 57, 100, 51, 53, 54, 55, 100, 52, 54, 101, 54, 98, 100, 55, 32, 40, 72, 69, 65, 68, 32, 45, 62, 32, 109, 97, 105, 110, 41, 10, 65, 117, 116, 104, 111, 114, 58, 32, 32, 32, 32, 32, 117, 110, 116, 97, 116, 97, 110, 32, 60, 49, 52, 51, 49, 51, 52, 52, 57, 52, 43, 117, 110, 116, 97, 116, 97, 110, 64, 117, 115, 101, 114, 115, 46, 110, 111, 114, 101, 112, 108, 121, 46, 103, 105, 116, 104, 117, 98, 46, 99, 111, 109, 62, 10, 65, 117, 116, 104, 111, 114, 68, 97, 116, 101, 58, 32, 77, 111, 110, 32, 83, 101, 112, 32, 57, 32, 48, 57, 58, 48, 57, 58, 48, 57, 32, 50, 48, 50, 52, 32, 43, 48, 48, 48, 48, 10, 67, 111, 109, 109, 105, 116, 58, 32, 32, 32, 32, 32, 117, 110, 116, 97, 116, 97, 110, 32, 60, 49, 52, 51, 49, 51, 52, 52, 57, 52, 43, 117, 110, 116, 97, 116, 97, 110, 64, 117, 115, 101, 114, 115, 46, 110, 111, 114, 101, 112, 108, 121, 46, 103, 105, 116, 104, 117, 98, 46, 99, 111, 109, 62, 10, 67, 111, 109, 109, 105, 116, 68, 97, 116, 101, 58, 32, 77, 111, 110, 32, 83, 101, 112, 32, 57, 32, 48, 57, 58, 48, 57, 58, 48, 57, 32, 50, 48, 50, 52, 32, 43, 48, 48, 48, 48, 10, 10, 32, 32, 32, 32, 99, 101, 114, 116, 105, 102, 108, 101, 120, 105, 99, 97, 116, 101, 32, 105, 110, 105, 116, 10]
+
+[public_signing_key]
+version = 1
+of_type = "ed25519_1"
+base64 = "1f4MoP1Znz5FLB-7My16wKj329W26jaPCXhGjzcroMs="
+identifier = "untatan signing key 20240102"
+
+[signatures._OE3NtHJvhNS9dfU9YQpUunDfvvcl-ak9S1Kvh6B9V-Ezo4z]
+version = 1
+base64 = "3_7q_gKvV3VpTpEXPVs6lKWcnOCPCkVUMsEXkTaUOqWgdT0c5nwPa4rDrsGh7GfSnLMzN2Jg9gItbQckvKCACA=="
+nonce = "_OE3NtHJvhNS9dfU9YQpUunDfvvcl-ak9S1Kvh6B9V-Ezo4z"
+signed_fields = ["flexicate", "public_signing_key", "signature_data"]
+accepted_base64 = "rE_hY_7skQywa5w4iSIi50ijbpjTpH26h9sTk6ZkMcYWaD43SUgR_oxntPh9FTl-g4AL9P84GHu0iBIHRBlKBg=="
+
+[signatures.V5lzu0sjRgpEQ09NNcSiRt5gelREzViSQcSDCVPkHuPWaZbe]
+version = 1
+base64 = "lZ9K2ymx4otzAejfh4NETJTGokIsvnnj2oSk-EaQgRDSt_Pe8EMIFeGV369tOAPuSHxaix_FfbOizIUVpSx_Bw=="
+nonce = "V5lzu0sjRgpEQ09NNcSiRt5gelREzViSQcSDCVPkHuPWaZbe"
+signed_fields = ["flexicate", "public_signing_key", "byte_content", "signature_data"]
+accepted_base64 = "3AT_s6F2-ealEEMgm3A7wvHbkm9i-YKixspOGEMGMzQxReYWWkkZeFP60MSkF-Mm06Xu_7pw2ZXpngpeZea4Bg=="

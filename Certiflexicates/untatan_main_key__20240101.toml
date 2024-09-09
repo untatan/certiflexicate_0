@@ -1,0 +1,15 @@
+certiflexicate = "certiflexicate"
+version = 1
+
+[public_signing_key]
+version = 1
+of_type = "ed25519_1"
+base64 = "oqVE6Pi6M1upWbckmW1lQ-MvzFS7cRVDI_yKhU6449I="
+identifier = "untatan key 20240101"
+
+[signatures.Azg3XMcx4YBL-zEm7wxNiflVUj3pwMcVXxzVcF7m1UOrlbjX]
+version = 1
+base64 = "iObFd5TlfHKO-yg_TvRjNMKkGZeMUOCrDJ8fDaIo8hxvWcqdVI5u7_ue7odqqJMDf-ALsQ1beJufrokUvPw1DQ=="
+nonce = "Azg3XMcx4YBL-zEm7wxNiflVUj3pwMcVXxzVcF7m1UOrlbjX"
+signed_fields = ["flexicate", "public_signing_key", "signature_data"]
+accepted_base64 = "UiWYustq6QJ3Zm5E6a_qTA6krAeRwI0jgk5ErQ7HGhM4nNbBPtqPcZeLl6hGgFr4MPFu80REHSVjap2lxK9ZCA=="

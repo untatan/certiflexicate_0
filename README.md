@@ -1,7 +1,7 @@
 # Certiflexicate
 
 The idea is to use certiflexicates as a flexible structure
-for digital signed data.
+to store and share digital signed data.
 
 ---
 
@@ -23,14 +23,15 @@ Usually a `Certiflexicate` includes
   * one or more `SignatureData` structures, which contains a signature,
     possibly an accept signature and optional other constraints.
 
-How [Certiflexicates](./certiflexicates) may appear.
+How [Certiflexicates](./Certiflexicates) may appear.
     
 ---
 
 ## Current state
 
 [flexicate-core](./crates/flexicate-core) has some experimental
-Rust code in order to discover flaws in the design and implementation.
+[Rust](https://www.rust-lang.org/) code in order to discover
+flaws in the design and implementation.
 
 **Do not use it for anything serious!**
 

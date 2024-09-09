@@ -1,0 +1,9 @@
+[workspace]
+
+members = [
+    "crates/flexicate-core",
+]
+resolver = "2"
+
+
+

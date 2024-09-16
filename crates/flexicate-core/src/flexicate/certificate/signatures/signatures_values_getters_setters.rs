@@ -41,7 +41,9 @@ use super::{
 
 impl SignatureData {
 
-  pub(super) fn set_claimed_signed_fields(
+  pub(
+      super
+  ) fn set_claimed_signed_fields(
       &mut self,
       mut claimed_signed_fields: Vec<CertiflexicateFieldTypes>,
   ) {
@@ -49,7 +51,9 @@ impl SignatureData {
     self.claimed_signed_fields = claimed_signed_fields;
   }
 
-  pub(super) fn get_nonce_str(&self) -> &str {
+  pub(
+      super
+  ) fn get_nonce_str(&self) -> &str {
     &self.nonce
   }
 
@@ -107,7 +111,9 @@ impl SignatureData {
     }
   }
 
-  pub(super) fn get_sig_public_key_info_ref(
+  pub(
+      super
+  ) fn get_sig_public_key_info_ref(
       &self,
   ) -> Result<
       &PublicKeyInfo,
@@ -122,6 +128,18 @@ impl SignatureData {
           )
       )
     }
+  }
+
+  pub(
+      super
+  ) fn get_sig_public_key_info_clone_clean(
+      &self,
+  ) -> Result<
+      PublicKeyInfo,
+      ErrorCertiflexicate,
+  > {
+    let pk = self.get_sig_public_key_info_ref()?;
+    Ok(pk.get_pk_clone_clean())
   }
 
   pub(
@@ -203,7 +221,9 @@ impl SignatureData {
 
 impl SignatureData {
 
-  pub(in super::super) fn clone_isolated(
+  pub(
+      in super::super
+  ) fn clone_isolated(
       &self,
   ) -> SignatureData {
     let mut sig = self.clone();

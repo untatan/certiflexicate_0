@@ -1,7 +1,6 @@
 
 
-// signatures_api
-
+// signatures_accepted_accessors
 
 // Copyright (C) 2024 untatan
 
@@ -19,40 +18,42 @@
 
 
 
-mod api_01 {
-
-  use super::{
+use super::{
+  SignatureAccepted,
+  super::{
+    PublicKeyInfo,
     super::{
-      PublicKeyInfo,
-      SignatureData,
       super::{
-        super::{
-          error::{
-            ErrorCertiflexicate,
-          },
+        error::{
+          ErrorCertiflexicate,
         },
       },
     },
-  };
+  },
+};
 
 
-  impl SignatureData {
+impl SignatureAccepted {
 
-    /// Get a reference to the nonce
-    pub fn get_nonce(&self) -> &str {
-      self.get_nonce_str()
+  pub(
+      super
+  ) fn get_signature_accepted_public_key_info_clone_clean(
+      &self,
+  ) -> Result<
+      PublicKeyInfo,
+      ErrorCertiflexicate,
+  > {
+    match self {
+      SignatureAccepted::NotAccepted(
+          sig
+      ) => sig.get_sig_public_key_info_clone_clean(),
+      SignatureAccepted::AcceptedSelf(
+          sig
+      ) => sig.get_sig_public_key_info_clone_clean(),
+      SignatureAccepted::Accepted(
+          sig
+      ) => sig.get_sig_public_key_info_clone_clean(),
     }
-
-    /// Get the PublicKeyInfo from the SignatureData
-    pub fn get_signature_public_key_info(
-        &self,
-    ) -> Result<
-        PublicKeyInfo,
-        ErrorCertiflexicate,
-    > {
-      self.get_sig_public_key_info_clone_clean()
-    }
-
   }
 
 }

@@ -1,6 +1,7 @@
 
 
-// signatures_accepted
+// signatures_accepted_api
+
 
 // Copyright (C) 2024 untatan
 
@@ -18,27 +19,38 @@
 
 
 
-use super::{
-  SignatureData,
-};
+mod api_01 {
+
+  use super::{
+    super::{
+      SignatureAccepted,
+      super::{
+        PublicKeyInfo,
+        super::{
+          super::{
+            error::{
+              ErrorCertiflexicate,
+            },
+          },
+        },
+      },
+    },
+  };
 
 
-mod signatures_accepted_accessors;
-mod signatures_accepted_api;
+  impl SignatureAccepted {
 
+    /// Get the PublicKeyInfo from the wrapped SignatureData
+    pub fn get_signature_public_key_info(
+        &self,
+    ) -> Result<
+        PublicKeyInfo,
+        ErrorCertiflexicate,
+    > {
+      self.get_signature_accepted_public_key_info_clone_clean()
+    }
 
-/// `SignatureData` depending on the availability of the
-/// accept state of the signature.
-#[non_exhaustive]
-#[derive(Clone, Debug, PartialEq)]
-pub enum SignatureAccepted {
-  /// signature is not accepted
-  NotAccepted(SignatureData),
-  /// signature is created with key of this certiflexicate and
-  /// automatically accepted if not deleted
-  AcceptedSelf(SignatureData),
-  /// signature is created with key from other certiflexicate and
-  /// later accepted by key of this certiflexicate
-  Accepted(SignatureData),
+  }
+
 }
 

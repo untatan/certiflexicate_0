@@ -90,6 +90,25 @@ impl Certiflexicate {
   }
 
   pub(
+      super
+  ) fn get_public_key_info_clone_clean(
+      &self,
+  ) -> Result<
+      PublicKeyInfo,
+      ErrorCertiflexicate,
+  > {
+    if let Some(ref pk) = self.public_key_info {
+      Ok(pk.get_pk_clone_clean())
+    } else {
+      Err(
+          ErrorCertiflexicate::invalid_pk_err(
+              "no public key to clone in certiflexicate",
+          )
+      )
+    }
+  }
+
+  pub(
       in super::super
   ) fn get_public_key_info_ref(
       &self,
@@ -108,7 +127,9 @@ impl Certiflexicate {
     }
   }
 
-  pub(super) fn get_public_key_info_mut_ref(
+  pub(
+      super
+  ) fn get_public_key_info_mut_ref(
       &mut self,
   ) -> Result<
       &mut PublicKeyInfo,

@@ -58,5 +58,13 @@ impl PublicKeyInfo {
     }
   }
 
+  pub(
+      in super::super
+  ) fn get_pk_clone_clean(&self) -> PublicKeyInfo {
+    let mut pki = self.clone();
+    pki.clear_secret_key_data();
+    pki
+  }
+
 }
 

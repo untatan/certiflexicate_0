@@ -26,6 +26,7 @@ mod tests {
   mod certiflexicate_data_content;
   mod certiflexicate_mini;
   mod certiflexicate_public_key_deserial;
+  mod certiflexicate_public_key_get;
   mod certiflexicate_secret_key;
   mod certiflexicate_signature_deserial;
   mod certiflexicate_signature_accept;

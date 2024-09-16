@@ -66,7 +66,9 @@ const CERTIFLEXICATEIDENTIFIER: &str = "certiflexicate";
 
 impl Certiflexicate {
 
-  pub(super) fn create_new_self_signed_internal(
+  pub(
+      super
+  ) fn create_new_self_signed_internal(
       secret_key_data: Option<&[u8; 32]>,
   ) -> Result<
       (
@@ -78,7 +80,20 @@ impl Certiflexicate {
     Certiflexicate::new_current_with_new_keys_self_signed(secret_key_data)
   }
 
-  pub(super) fn get_verified_but_unchecked_signatures_internal(
+  pub(
+      super
+  ) fn get_public_key_info_internal(
+      &self,
+  ) -> Result<
+      PublicKeyInfo,
+      ErrorCertiflexicate,
+  > {
+    self.get_public_key_info_clone_clean()
+  }
+
+  pub(
+      super
+  ) fn get_verified_but_unchecked_signatures_internal(
       &mut self,
       limited_to: &[DataFields],
   ) -> Result<
@@ -88,7 +103,9 @@ impl Certiflexicate {
     self.get_all_verified_but_unchecked_signatures_internal(limited_to)
   }
 
-  pub(super) fn get_signable_data_fields_internal(
+  pub(
+      super
+  ) fn get_signable_data_fields_internal(
       &self,
   ) -> Result<
       Vec<DataFields>,
@@ -97,7 +114,9 @@ impl Certiflexicate {
     self.get_signable_datas()
   }
 
-  pub(super) fn attach_secret_key_internal(
+  pub(
+      super
+  ) fn attach_secret_key_internal(
       &mut self,
       secret_key: &[u8; 32],
   ) -> Result<(), ErrorCertiflexicate> {
@@ -106,7 +125,9 @@ impl Certiflexicate {
     )
   }
 
-  pub(super) fn create_and_add_self_signed_signature_internal(
+  pub(
+      super
+  ) fn create_and_add_self_signed_signature_internal(
       &mut self,
       extended_to_fields: &[DataFields],
   ) -> Result<
@@ -134,7 +155,9 @@ impl Certiflexicate {
     )
   }
 
-  pub(super) fn accept_signature_internal(
+  pub(
+      super
+  ) fn accept_signature_internal(
       &mut self,
       signature: &SignatureData,
   ) -> Result<
@@ -144,14 +167,18 @@ impl Certiflexicate {
     self.accept_a_signature_in_this_cert(signature)
   }
 
-  pub(super) fn add_new_data_and_create_self_signed_signature_internal(
+  pub(
+      super
+  ) fn add_new_data_and_create_self_signed_signature_internal(
       &mut self,
       data: DataContent,
   ) -> Result<SignatureData, ErrorCertiflexicate> {
     self.add_data_and_create_self_signed_signature(data)
   }
 
-  pub(super) fn get_data_with_signatures_internal(
+  pub(
+      super
+  ) fn get_data_with_signatures_internal(
       &mut self,
       field: DataFields,
   ) -> Result<

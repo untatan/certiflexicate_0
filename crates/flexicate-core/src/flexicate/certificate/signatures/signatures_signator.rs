@@ -111,7 +111,7 @@ impl SignatureData {
     if cert.signatures.is_none() {
       if let Some(public_key_info) = &cert.public_key_info {
         let mut sig = SignatureData::new_current_default_from_public_key(
-            public_key_info.clone(),
+            public_key_info.get_pk_clone_clean(),
         );
         sig.create_signature(
             public_key_info,
@@ -157,7 +157,7 @@ impl SignatureData {
           let self_sig = public_key_info.equal_wo_keys_data(pk);
           let mut sig = SignatureData
               ::new_current_default_general_with_public_key(
-                  pk.clone(),
+                  pk.get_pk_clone_clean(),
                   nonce,
                   self_sig,
               )

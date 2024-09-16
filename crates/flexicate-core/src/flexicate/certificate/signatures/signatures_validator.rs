@@ -339,7 +339,7 @@ impl SignatureData {
     if add_it && !self.cert_has_same_public_key
     {
       if let Some(pk) = pk_opt {
-        self.public_sig_key_info = Some(pk.clone());
+        self.public_sig_key_info = Some(pk.get_pk_clone_clean());
         self.cert_has_same_public_key = true;
       };
     };

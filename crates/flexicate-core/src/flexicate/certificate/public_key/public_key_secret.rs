@@ -138,5 +138,15 @@ impl PublicKeyInfo {
     self.secret_key_data.is_some()
   }
 
+  pub(
+      super
+  ) fn clear_secret_key_data(
+      &mut self,
+  ) {
+    if self.has_secret_key_data() {
+      self.secret_key_data = None;
+    };
+  }
+
 }
 

@@ -24,6 +24,7 @@ mod api_01 {
     super::{
       Certiflexicate,
       DataFields,
+      PublicKeyInfo,
       SignatureAccepted,
       SignatureData,
       certificate_internal::{
@@ -67,6 +68,16 @@ mod api_01 {
         ErrorCertiflexicate,
     > {
       Certiflexicate::create_new_self_signed_internal(secret_key_data)
+    }
+
+    /// Get the PublicKeyInfo
+    pub fn get_public_key_info(
+        &self,
+    ) -> Result<
+        PublicKeyInfo,
+        ErrorCertiflexicate,
+    > {
+      self.get_public_key_info_internal()
     }
 
     /// Get available verified `SignatureData`

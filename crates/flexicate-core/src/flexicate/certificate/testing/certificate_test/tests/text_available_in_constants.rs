@@ -26,6 +26,7 @@ mod tests {
       CERTIFICATE_STRING_VALID_001,
       PUBLICKEY_STRING_VALID_001,
       SIGNATURE_STRING_VALID_001,
+      SIGNATURE_STRING_DATA_ADDED_VALID_001,
     },
   };
 
@@ -234,6 +235,13 @@ mod tests {
   #[test]
   fn certiflexicate_test_has_text_suc_306() {
     assert!(SIGNATURE_STRING_VALID_001.contains(
+        "[public_signing_key]\n      version = 1\n      of_type = \"ed25519_1\"\n      base64 = \"IjD-8sTjv-slO65Tl0lR9xtnLfYkSUWJh2lhCO9Nnxw=\"\n      identifier = \"6odFgzaD2Pc9uw9GGGzlotdVvXhHLfwndqql97PT7LOECN-z\"\n",
+    ));
+  }
+
+  #[test]
+  fn certiflexicate_test_has_text_suc_307() {
+    assert!(SIGNATURE_STRING_DATA_ADDED_VALID_001.contains(
         "[public_signing_key]\n      version = 1\n      of_type = \"ed25519_1\"\n      base64 = \"IjD-8sTjv-slO65Tl0lR9xtnLfYkSUWJh2lhCO9Nnxw=\"\n      identifier = \"6odFgzaD2Pc9uw9GGGzlotdVvXhHLfwndqql97PT7LOECN-z\"\n",
     ));
   }
